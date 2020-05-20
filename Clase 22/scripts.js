@@ -41,11 +41,11 @@ addNumbers(...numbersToAdd) */
 
 // Enviar un número indefinido de argumentos a una función (parámetros REST)
 
-     const restParms = (...numbers) => {
+   /*  const restParms = (...numbers) => {
         console.log(numbers)
     }
 
-    restParms(1,2,3,4,5,6,7,8)
+    restParms(1,2,3,4,5,6,7,8,9)*/
 
 //librería math
 /*const numbers = [-12, 2, 3, 23, 43, 2, 3]
