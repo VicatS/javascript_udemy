@@ -7,23 +7,35 @@ document | element .querySelectorAll('selectorCSS') - Accede a todos los element
 */
 
 /* const title = document.getElementById('title')
+console.log(title)
+title.textContent = 'DOM - Accediendo a nodos'*/
 
-title.textContent = 'DOM - Accediendo a nodos' */
+// querySelector
+/*const paragraph = document.querySelector('.paragraph')
 
-/* const paragraph = document.querySelector('.paragraph')
+// const span = paragraph.querySelector("span")
+const span = document.getElementById('title').querySelector("span")
 
-const span = document.getElementById('title').querySelector("span") */
+console.log(span.textContent)*/
 
+// querySelectorAll
 const paragraphs = document.querySelectorAll('.paragraph')
 
-//const paragraphsSpread = [...document.querySelectorAll('.paragraph')]
+// const paragraphsSpread = [...document.querySelectorAll('.paragraph')]
 
 const paragraphsArray = Array.from(document.querySelectorAll('.paragraph'))
 
+// for one element
 paragraphs[0].style.color = 'red'
 
-//paragraphs.map(p => p.style.color = 'green')
+// console.log(paragraphs)
 
-//paragraphsSpread.map(p => p.style.color = 'green')
+// paragraphs.map(p => p.style.color = 'green')
 
-paragraphsArray.map(p=>p.style.color='blue')
+// paragraphsSpread.map(p => p.style.color = 'green')
+
+paragraphsArray.map(p => p.style.color = 'purple')
+
+
+
+
