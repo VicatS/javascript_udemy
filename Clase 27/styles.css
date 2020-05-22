@@ -4,7 +4,7 @@
     grid-gap: 10px;
 }
 
-.gallery__item {
+.gallery_item {
     display: flex;
     justify-content: center;
     align-items: center;
