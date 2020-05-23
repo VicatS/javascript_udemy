@@ -18,15 +18,15 @@ const getData = (id) => {
         xhr.addEventListener('load', (data) => {
             const dataJSON = JSON.parse(data.target.response)
             console.log(dataJSON)
-        
-        const fragment = document.createDocumentFragment()
 
-        for (const heroes of dataJSON) {
-            const option = document.createElement('OPTION')
-            option.setAttribute('value', heroes.ID)
-            option.textContent = heroes.Name
-            fragment.appendChild(option)
-        }
+            const fragment = document.createDocumentFragment()
+
+            for (const heroes of dataJSON) {
+                const option = document.createElement('OPTION')
+                option.setAttribute('value', heroes.ID)
+                option.textContent = heroes.Name
+                fragment.appendChild(option)
+            }
 
             characters.appendChild(fragment)
         })
@@ -52,20 +52,22 @@ const getData = (id) => {
                 dataGender.textContent = heroe.Gender
                 dataFighting.textContent = heroe.Fighting_Skills
 
-                row.append(dataName)
-                row.append(dataAlignment)
-                row.append(dataHometown)
-                row.append(dataGender)
-                row.append(dataFighting)
+                row.appendChild(dataName)
+                row.appendChild(dataAlignment)
+                row.appendChild(dataHometown)
+                row.appendChild(dataGender)
+                row.appendChild(dataFighting)
 
-                fragment.append(row)
+                fragment.appendChild(row)
             }
-
-            if (table.children[1]) {
+            if (table.children[1])
+            {
                 table.removeChild(table.children[1])
             }
-            table.append(fragment)
+            table.appendChild(fragment)
+
         })
+
     }
 
     xhr.send()

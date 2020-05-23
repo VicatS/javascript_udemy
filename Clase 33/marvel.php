@@ -2,7 +2,7 @@
     $conn = NULL;
         try{
 
-            $con = new PDO("mysql:host=localhost; dbname=marvel; charset=utf8", 'root', '');
+            $con = new PDO("mysql:host=localhost; dbname=marvel; charset=utf8", 'root', 'secret');
 
             if(isset($_GET['id'])){
                 $id = $_GET['id'];
