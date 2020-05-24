@@ -18,8 +18,8 @@ const button = document.getElementById('button')
 
 button.addEventListener('click', () => {
     const newPost = {
-        title: 'A new post',
-        body: ' Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        title: 'A new Post',
+        body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         userId: 1
     }
 
