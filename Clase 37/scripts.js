@@ -18,8 +18,8 @@
 
 const button = document.getElementById('button')
 
-//res = response = respuesta
 button.addEventListener('click', () => {
+    //res = response = respuesta
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.ok ? Promise.resolve(res) : Promise.reject(res))
 
