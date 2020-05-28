@@ -15,24 +15,24 @@ const keys = document.getElementById('keys')
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    // const person = {
-    //     name: 'Dorian',
-    //     email: 'dorian@gmail.com'
-    // }
+/*    const person = {
+        'name': 'Victor',
+        'email': 'victor@gmail.com'
+    }*/
 
     // sessionStorage.setItem('person', JSON.stringify(person))
-    // sessionStorage.setItem('name', 'Dorian')
-
+    // sessionStorage.setItem('name', 'Victor')
     localStorage.setItem(form.key.value, form.value.value)
 
-    keys.innerHTML += `<option>${ form.key.value }</option>`
+    keys.innerHTML += `<option>${form.key.value}</option>`
 
     form.reset()
 })
 
 keys.addEventListener('change', () => {
-    document.getElementById('infoValue').textContent =
-        localStorage.getItem(keys[ keys.selectedIndex ].textContent)
+    // localStorage.getItem(keys[keys.selectedIndex].textContent)
+
+    document.getElementById('infoValue').textContent = localStorage.getItem(keys[keys.selectedIndex].textContent)
 })
 
 // localStorage.clear()
