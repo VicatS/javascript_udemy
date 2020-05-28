@@ -19,23 +19,26 @@
 const smile = document.getElementById('smile')
 const dropZone = document.getElementById('drop-zone')
 
-smile.addEventListener('dragend', () => {
-    console.log('Drag End')
-})
+// Method for objetc
+/*smile.addEventListener('dragend', () => {
+    console.log('Drag END')
+})*/
 
+/*//method for zone destiny
 dropZone.addEventListener('dragover', (e) => {
     e.preventDefault()
-    console.log('Drag Over')
+    console.log('DRAG OVER')
 })
 
+//drop and dragover going together
 dropZone.addEventListener('drop', (e) => {
     e.preventDefault()
-    console.log('Drop')
-})
+    console.log('DROP')
+})*/
 
 dropZone.addEventListener('dragleave', (e) => {
     e.preventDefault()
-    console.log('Drag Leave')
+    console.log('DRAG LEAVE')
 })
 
 
