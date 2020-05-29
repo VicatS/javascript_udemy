@@ -33,7 +33,7 @@ if (indexedDB && form) {
         readData()
     }
 
-    const readData = () => {
+    const readData = (data) => {
         const transaction = db.transaction(['tasks'], 'readonly')
         const objectStore = transaction.objectStore('tasks')
         const request = objectStore.openCursor()
