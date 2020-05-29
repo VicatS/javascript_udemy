@@ -16,7 +16,7 @@ if (indexedDB && form) {
         db = e.target.result
         console.log('Create', db)
         const objectStore = db.createObjectStore('tasks', {
-            autoIncrement: true
+            keyPath: 'taskTitle'
         })
     }
 
@@ -36,6 +36,7 @@ if (indexedDB && form) {
             taskTitle: e.target.task.value,
             taskPriority: e.target.priority.value
         }
+        // console.log(data)
         addData(data)
     })
 }
