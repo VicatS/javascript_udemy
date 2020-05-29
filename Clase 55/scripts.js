@@ -2,8 +2,7 @@ const indexedDB = window.indexedDB
 
 if (indexedDB) {
     let db
-    const request = indexedDB.open('tasksList', 1)
-
+    const request = indexedDB.open('taskList', 1)
     request.onsuccess = () => {
         db = request.result
         console.log('OPEN', db)
@@ -11,7 +10,7 @@ if (indexedDB) {
 
     request.onupgradeneeded = () => {
         db = request.result
-        console.log('Create', db)
+        console.log('CREATE', db)
         const objectStore = db.createObjectStore('tasks')
     }
 
