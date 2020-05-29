@@ -38,7 +38,7 @@ if (indexedDB && form) {
         const objectStore = transaction.objectStore('tasks')
         const request = objectStore.get(key)
 
-        request.onsuccess = (e) => {
+        request.onsuccess = () => {
             form.task.value = request.result.taskTitle
             form.priority.value = request.result.taskPriority
             form.button.dataset.action = 'update'
@@ -100,11 +100,10 @@ if (indexedDB && form) {
             taskPriority: e.target.priority.value
         }
 
-
         if (e.target.button.dataset.action == 'add') {
             addData(data)
         } else if (e.target.button.dataset.action == 'update') {
-            updateData(data)
+           updateData(data)
         }
 
         form.reset()
