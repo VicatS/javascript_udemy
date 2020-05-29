@@ -18,7 +18,7 @@ const options = {
 }
 
 const getPosition = (position) => {
-    console.log(object)
+    console.log(position)
 
 }
 
