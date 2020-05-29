@@ -11,37 +11,35 @@ const person = {
 }
 
 //FORMA TRADICIONAL
-// const name = person.name
-// const age = person.age
-// const email = person.email
+/*const name = person.name
+const age = person.age
+const email = person.email*/
 
 //DESTRUCTURING
-// const { name: nombre, age: edad, email } = person
-// const { name, age, email } = person
+/*const {name:nombre, age:edad, email} = person
+const {name, age, email} = person
 
-// console.log(nombre, edad, email)
+console.log(nombre, edad, email)
+console.log(name, age, email)*/
 
-// console.log(name, age, email)
+/*const numbers = [1, 2, 3, 4]
 
-// const numbers = [1, 2, 3, 4]
+const [a, b, terceraPosicion] = numbers
 
-// const [a, b, terceraPosicion] = numbers
+console.log(terceraPosicion)*/
 
-// console.log(terceraPosicion)
+/*const printPerson= (name) => {
+    console.log(name)
+}
 
-// const printPerson = ({ name }) => {
-//     console.log(name)
-// }
+const printPerson= ({name: nombre}) => {
+    console.log({name: nombre})
+}
 
-// const printPerson = ({ name: nombre }) => {
-//     console.log(nombre)
-// }
-
-// printPerson(person)
+printPerson(person)*/
 
 const getUsers = async () => {
-    const { data: users } = await axios.get('https://jsonplaceholder.typicode.com/users')
-
+    const {data: users} = await axios.get('https://jsonplaceholder.typicode.com/users')
     console.log(users)
 }
 
